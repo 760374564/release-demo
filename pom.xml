@@ -3,7 +3,7 @@
 
 	<groupId>com.shanke</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.5-SNAPSHOT</version>
+	<version>0.0.5</version>
 	<packaging>jar</packaging>
 
 	<name>release-demo</name>
@@ -44,7 +44,7 @@
 	</dependencyManagement>
 	<scm>
 		<developerConnection>scm:git:https://github.com/760374564/release-demo</developerConnection>
-	  <tag>v0.0.2</tag>
+	  <tag>v0.0.5</tag>
   </scm>
 	<distributionManagement>
 		<repository>
