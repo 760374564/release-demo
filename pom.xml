@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.shanke</groupId>
@@ -43,9 +45,11 @@
 		</dependencies>
 	</dependencyManagement>
 	<scm>
+		<connection>scm:git:https://github.com/760374564/release-demo</connection>
 		<developerConnection>scm:git:https://github.com/760374564/release-demo</developerConnection>
-    <tag>v0.0.6</tag>
-  </scm>
+		<url>scm:git:https://github.com/760374564/release-demo.git</url>
+		<tag>v0.0.6</tag>
+	</scm>
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
@@ -113,4 +117,43 @@
 			</plugin>
 		</plugins>
 	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+				<version>2.3</version>
+				<reportSets>
+					<reportSet>
+						<id>dual-report</id>
+						<configuration>
+							<type>range</type>
+							<range>30</range>
+						</configuration>
+						<reports>
+							<report>changelog</report>
+							<report>file-activity</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+				<!--<configuration> <type>date</type> <dates> <date implementation="java.lang.String">2005-08-01</date> 
+					<date implementation="java.lang.String">2005-09-01</date> </dates> <dateFormat>yyyy-MM-dd</dateFormat> 
+					</configuration> <configuration> <type>range</type> <range>30</range> </configuration> 
+					<configuration> <type>tag</type> <tags> <tag implementation="java.lang.String">v0.0.1</tag> 
+					<tag implementation="java.lang.String">v0.0.5</tag> </tags> </configuration> -->
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>2.12.1</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>changes-report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>
