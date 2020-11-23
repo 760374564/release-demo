@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.shanke</groupId>
 		<artifactId>release-demo</artifactId>
-		<version>0.0.10-SNAPSHOT</version>
+		<version>0.0.10</version>
 	</parent>
 	<artifactId>release-demo-module2</artifactId>
 	<name>release-demo-module2</name>
