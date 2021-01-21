@@ -6,7 +6,7 @@
 
 	<groupId>com.shanke</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.12-SNAPSHOT</version>
+	<version>0.0.14-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>release-demo</name>
